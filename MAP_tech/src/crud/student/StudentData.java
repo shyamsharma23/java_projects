@@ -25,7 +25,11 @@ public class StudentData {
 			obj.setStudentname(sc.next());
 			System.out.println("Enter the Score: ");
 			obj.setScore(sc.nextInt());
-			studentlist.add(obj);
+			if(!studentlist.add(obj)) {
+				System.out.println("The record already exist");
+			}else {
+				System.out.println("Record added");
+			}
 		}
 	}
 	
